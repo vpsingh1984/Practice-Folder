@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="myFunc()">Click Me</button>
+
+<script>
+
+ function myFunc() {
+    var name = "Mozilla"; // name is a local variable created by myFunc
+     function displayName() { // displayName() is the inner function, a closure
+        alert (name); // displayName() uses variable declared in the parent function    
+    }
+    console.log(name);
+    return displayName();    
+}
+
+//console.log(myFunc());
+</script>
+
+</body>
+</html> 

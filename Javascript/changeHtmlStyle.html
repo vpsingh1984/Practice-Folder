@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+</head>
+<body>
+
+<h1 class="hello">JavaScript Can Change Images</h1>
+
+<!-- <img id="myImage" src="images/pic_bulboff.gif" width="100" height="180"> -->
+
+<p>Click the light bulb to turn on/off the light.</p>
+<button type="button" onclick="changeImage()">Swtich On/Off</button>
+
+<script>
+
+	
+
+	function changeImage(){
+		var status = document.getElementsByTagName("h1")[0];
+		status.style.color = "red"; 
+		console.log("font color changed");
+	}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<style type="text/css">
+	.mgtop1{margin-top: 10px;}
+	</style>
+</head>
+<body>
+
+<section class="container" style="margin-top:50px;">
+	<article class="col-sm-12">
+		<h1>Currency Converter</h1>
+	</article>
+	<article class="col-sm-3">
+		<div class="form-group">
+		    <label for="field1">Choose Currency</label>
+		    <select id="currency1" class="form-control" onchange="displayCurrencyName()">
+                <option value="selected">Select Currency</option>
+                <option value="Indian Rupees">Indian Rupees</option>
+                <option value="US Dollar">US Dollar</option>
+            </select>
+            <select id="currency2" class="form-control mgtop1" onchange="convertFun()">
+                <option value="selected">Convert Into</option>
+                <option value="US Dollar">US Dollar</option>
+                <option value="Indian Rupees">Indian Rupees</option>
+            </select>
+            
+		</div>
+	</article>
+	<article class="col-sm-3">
+		<div class="form-group">
+		    <label for="field2">Result Here</label>
+		    <input type="text" class="form-control" id="field1" value="1">
+            <input type="text" class="form-control mgtop1" id="field2" placeholder="">
+		</div>
+	</article>
+	<article class="col-sm-3">
+		<div class="form-group">
+			<h2 id="curName1"></h2>
+		</div>
+		<div class="form-group">
+			<h2 id="curName2"></h2>
+		</div>
+	</article>
+	<article class="col-sm-12">
+		<h1 id="demo"></h1>
+	</article>
+</section>
+
+
+
+<p id="demo"></p>
+
+<script>
+
+	value1 = document.getElementById("field1").value;
+	value2 = document.getElementById("field2");
+	currency1 = document.getElementById("currency1");
+	currency2 = document.getElementById("currency2");
+	dollar = 67.22;
+	//console.log("status1: " + status1)
+
+function convertFun() {
+	status2 = currency2.value;
+	if (status1 == "Indian Rupees" && status2 == "US Dollar") {
+		var result = value1/dollar;
+		document.getElementById("demo").innerHTML = result;
+		document.getElementById("curName2").innerHTML = status2;
+		value2.value = result;
+
+	};
+}
+
+function displayCurrencyName(){
+	status1 = currency1.value;
+	document.getElementById("curName1").innerHTML = status1;
+	console.log("status1: " + status1)
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>The jQuery Example</title>
+  <script type = "text/javascript" 
+     src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1>Hello</h1>
+  <button id="p1">Click me</button>
+
+  <script type = "text/javascript">
+  
+    $(document).ready(function(){
+      $("#p1").hover(
+        function(){
+          alert("You entered p1!");
+        },
+        function(){
+          alert("Bye! You now leave p1!");
+        }
+      ); 
+    });
+
+
+  </script> 
+
+</body>
+	
+</html>

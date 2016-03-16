@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>isObject Exp</title>
+	<link rel="stylesheet" href="bootstrap.min.css" >
+</head>
+<body>
+<div class="container" ng-controller="test">
+	<input type = "checkbox" ng-model = "showHide2">Hide Button
+	<button class="btn btn-default" ng-show = "showHide2">Click Me!</button>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<!-- <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script> -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script> -->
+
+<script>
+	
+	app = angular.module('demo', []);
+
+	app.controller('test', function($scope){
+		var list = {
+			name: "Vijay",
+			rollno: 02415,
+		}
+		var arrayList = null;
+
+		var status = angular.isObject(arrayList);
+		console.log(status);
+	});
+</script>
+
+</body>
+</html>

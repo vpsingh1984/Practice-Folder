@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+</head>
+<body>
+
+
+<h1>My First JavaScript</h1>
+<p id="demo"></p>
+<button type="button" onClick="hello()">
+Click me to display Date and Time.</button>
+
+<script>
+
+var color1 = "red";
+var color2 = color1;
+
+console.log(color1);
+console.log(color2);
+
+console.log("=======================================");
+
+var color1 = "blue";
+
+console.log(color1);
+console.log(color2);
+
+
+
+
+function hello() {
+    document.getElementById('demo').innerHTML = Date();
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+</head>
+<body>
+
+<script>
+
+//litrel object	
+	var person = {		
+		firstName:"John", 
+		lastName:"Doe", 
+		age:50, 
+		eyeColor:"blue"
+	}; 
+	console.log(person);
+
+//Object with new keyword
+	var person = new Object();
+	person.firstName = "VIjay";
+	person.lastName = "Singh";
+	person.age = 30;
+	person.eyeColor = "blue";
+
+	console.log(person);
+
+//Object constructor function
+	function person(firstName, lastName, age, eyeColor){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.eyeColor = eyeColor;
+	}
+
+	var personOne = person("Raj", "Kishor", 25, "Black");
+	var personTwo = person("Salman", "Khan", 28, "Green");
+
+	console.log(personOne.firstName);
+	console.log(personTwo);
+	
+</script>
+
+</body>
+</html>

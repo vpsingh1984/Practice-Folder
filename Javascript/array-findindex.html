@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to check get the index of the first element in the array that has a value of 18 or more.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+
+    var ages = ["hello", "hi", "vijay", "yo"];
+
+    function checkAge(age){
+        return age>= "yo";
+    }
+
+    function myFunction(){
+        document.getElementById("demo").innerHTML = ages.findIndex(checkAge);
+    }
+
+</script>
+
+</body>
+</html>

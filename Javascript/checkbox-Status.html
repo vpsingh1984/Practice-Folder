@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<!-- <body onload="myFunction()"> -->
+<body>
+
+<p>Click the first button to alert "Hello" after waiting 3 seconds.</p>
+<p>Click the second button to prevent the first function to execute. (You must click it before the 3 seconds are up.)</p>
+<input class="vijay" type="checkbox" name="checkbox" /><br/>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="myStopFunction()">Stop the alert</button>
+
+<script>
+
+var status = document.getElementByClassName('vijay').checked;
+
+if (status == true){
+	alert('checked');
+}else{
+	alert('un checked');
+}
+
+</script>
+
+
+</body>
+</html>

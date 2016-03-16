@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+	<link rel="stylesheet" href="bootstrap.min.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+</head>
+<body>
+<div class="container" ng-controller="ModuleController">
+	<div>{{service}}</div>
+	<div>{{factory}}</div>
+	<div>{{provider}}</div>
+</div>
+
+
+
+<!-- <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script> -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script> -->
+
+<script>
+	
+	app = angular.module('demo', []);
+
+	var fun = function(){
+		this.name = "SomeName";
+		this.$get = function(){
+			this.name = "New Name";
+			return "Default fun.$get(). this.name = "+ this.name;
+		};
+		return "fun () . this.name = " + this.name;
+	}
+
+	app.service('serviceExample', fun ); //returns the actual function
+
+	app.provider('providerExample', fun); // returns the output of the function's $get function
+
+	app.factory('factoryExample', fun); // returns the function's return value;
+
+	app.controller('ModuleController', function($scope, serviceExample, providerExample, factoryExample){
+		$scope.service = "the Service is actual function value = " + serviceExample;
+		$scope.factory = "the factory is function's return value = " + factoryExample;
+		$scope.provider = "the Provider is provider $getFunction = " + providerExample;
+	});
+
+	
+
+
+</script>
+
+</body>
+</html>

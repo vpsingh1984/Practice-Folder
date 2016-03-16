@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<!-- <body onload="myFunction()"> -->
+<body>
+
+<p>Click the first button to alert "Hello" after waiting 3 seconds.</p>
+<p>Click the second button to prevent the first function to execute. (You must click it before the 3 seconds are up.)</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="myStopFunction()">Stop the alert</button>
+
+<script>
+
+var mytime;
+
+function myFunction(){
+	console.log("started");
+	mytime = setInterval(function(){alert("Hello Vijay")}, 2000);
+}
+
+function myStopFunction(){ 
+	console.log("stopped");
+	clearInterval(mytime);
+}
+
+</script>
+
+
+</body>
+</html>

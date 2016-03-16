@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+</head>
+<body>
+<button onclick="vj()"> Click</button>
+<p id="demo"></p>
+
+<script>
+
+	var Player = function(name, hitpoint, bonuspoint){
+		this.name = name;
+		this.hitpoint = hitpoint;
+		this.bonuspoint = bonuspoint;
+	}
+
+	var Player1 = new Player('Vijay', 5000, 100);
+	var Player2 = new Player('Katrina', 1000, 150);
+
+	console.log(Player1);
+	console.log(Player2);
+
+</script>
+
+
+</body>
+</html>

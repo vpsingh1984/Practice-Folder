@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+	<link rel="stylesheet" href="bootstrap.min.css" >
+	<!--<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />-->
+	<!--<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+	<!--<script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>-->
+	<!--<script src="https://cdn.datatables.net/1.10.10/js/dataTables.bootstrap.min.js"></script>-->
+
+</head>
+<body>
+<div class="container" ng-controller="test">
+	<input type = "checkbox" ng-model = "showHide2">Hide Button
+	<button class="btn btn-default" ng-show = "showHide2">Click Me!</button>
+</div>
+
+<!-- <div class="moderate-chat-icon">
+	<i class="fa fa-user"></i>
+</div> -->
+<img class="media-object" src="@item.ProfileImage" /> 
+
+
+<video style="width:100%;" id="welcomevideo" class="hide welcome-message-modal-popup" controls>
+    <source src="http://www.tri-digital.com/wp-content/uploads/2014/12/holiday.mp4?_=1" type="video/mp4" />
+</video>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<!-- <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script> -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script> -->
+
+<script>
+	
+	app = angular.module('demo', []);
+
+	app.controller('test', function($scope){
+		$scope.title = "Vijay";
+	});
+</script>
+
+</body>
+</html>

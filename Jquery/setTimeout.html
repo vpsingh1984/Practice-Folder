@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>The jQuery Example</title>
+  <script type = "text/javascript" 
+     src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1>Hello</h1>
+  <button id="p1" onclick="start()">click Start</button>
+    <button id="p1" onclick="stop()">click Stop</button>
+
+  <script type = "text/javascript">
+  
+    var vijay;
+
+    function start(){
+         status = setTimeout(
+            function () {
+                alert("hello");
+            }, 3000)
+    }
+    function stop() {
+        clearTimeout(status)
+    }
+
+
+  </script> 
+
+</body>
+	
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").bind("click", function(){
+        $(this).css("color", "red");
+    });
+});
+</script>
+
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div></div>
+
+<p>Hover over the div element above, to see the transition effect.</p>
+
+
+<style> 
+
+	div {
+	    width: 100px;
+	    height: 100px;
+	    background: red;
+
+	    /*-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+	    transition: width 2s, height 2s, transform 2s;
+	}
+
+	div:hover {
+	    width: 300px;
+	    height: 300px;
+
+	    /*-webkit-transform: rotate(360deg); /* Safari */
+	    transform: rotate(360deg);
+	}
+
+</style>
+
+</body>
+</html>

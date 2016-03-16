@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+</head>
+<body>
+
+<h1>JavaScript Can Validate Input</h1>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input type="text" id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+
+	function myFunction(){
+		var result = document.getElementById("numb").value;
+		var status = document.getElementById("demo");
+
+		if(isNaN(result)){ 
+			status.innerHTML = "Please Enter a Number only";
+		} else if(result < 1) {
+			status.innerHTML = "Please Enter a Number geater than 1";
+		} else if(result > 10) {
+			status.innerHTML = "Please Enter a Number less than 10";
+		}
+		
+	}
+
+var person;
+console.log(typeof person);
+
+var car = "";
+console.log(typeof car);
+
+</script>
+
+</body>
+</html>
