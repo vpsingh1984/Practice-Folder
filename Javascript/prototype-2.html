@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+</head>
+<body>
+<button onclick="vj()"> Click</button>
+<p id="demo"></p>
+
+<script>
+
+
+// function person(first, last, age, eye) {
+//     this.firstName = first;
+//     this.lastName = last;
+//     this.age = age;
+//     this.eyeColor = eye;
+// }
+
+// var myFather = new person("John", "Doe", 50, "blue");
+// var myMother = new person("Sally", "Rally", 48, "green");
+
+// person.prototype.nationality = "Indian";
+
+// console.log(myFather.nationality);
+
+
+
+	// function company (name, empid){
+	// 	this.name = name;
+	// 	this.empid = empid;
+	// }
+
+	// function employee(){
+	// 	this.salary = 20000;
+	// }
+	
+	// company.prototype = {
+	// 	fullName: function(){
+	// 		return this.name + " " + this.empid;
+	// 	}
+	// }
+	// var c = Object.create(company.prototype);
+	// 	c.name = "hello";
+	// 	c.myFunction = function(){
+	// 		return this.empid;
+	// 	}
+
+
+        // I am the person constructor.
+        function Person( name ){
+            // Store the property.
+            this.name = name;
+        }
+        // Set up the class methods.
+        Person.prototype.getName = function(){
+            return( this.name );
+        };
+
+         function Girl( name ){
+            // Call the super constructor.
+            Person.call( this, name );
+            // Create the traits property.
+            this.traits = {};
+        }
+
+        Girl.prototype = Object.create( Person.prototype );
+
+        // Create a girl instance.
+        var sarah = new Girl( "Sarah" );
+
+        // Set sarah's properties.
+        sarah.traits.age = 30;
+        sarah.traits.weight = 125;
+
+        // Create a girl instance.
+        var tricia = new Girl( "Tricia" );
+
+        // Set tricia's properites.
+        tricia.traits.age = 32;
+        tricia.traits.weight = 140;
+
+        // Log the girls' traits.
+        console.log( sarah.getName(), sarah.traits );
+        console.log( tricia.getName(), tricia.traits );
+
+	//console.log(c.myFunction(20));
+
+
+// , details.empid, details.salary
+</script>
+
+
+</body>
+</html>
