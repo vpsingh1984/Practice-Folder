@@ -8,37 +8,21 @@
 
 <script>
 
-//litrel object	
-	var person = {		
-		firstName:"John", 
-		lastName:"Doe", 
-		age:50, 
-		eyeColor:"blue"
-	}; 
-	console.log(person);
+var obj1 = new Object();
+var obj2 = obj1;
 
-//Object with new keyword
-	var person = new Object();
-	person.firstName = "VIjay";
-	person.lastName = "Singh";
-	person.age = 30;
-	person.eyeColor = "blue";
+obj1.name = "Vijay";
+obj1.mobile = 321646465;
 
-	console.log(person);
+obj2.car = "Alto";
+var book = {
+	"name@": "The Principles of Object-Oriented JavaScript",
+	"year": 2014
+};
 
-//Object constructor function
-	function person(firstName, lastName, age, eyeColor){
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.age = age;
-		this.eyeColor = eyeColor;
-	}
-
-	var personOne = person("Raj", "Kishor", 25, "Black");
-	var personTwo = person("Salman", "Khan", 28, "Green");
-
-	console.log(personOne.firstName);
-	console.log(personTwo);
+console.log(book."name@"); 
+// console.log(obj2.mobile); 
+// console.log(obj1.car); 
 	
 </script>
 

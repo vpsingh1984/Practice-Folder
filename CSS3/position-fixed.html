@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<style type="text/css">
+html, body{
+	height: 100%;
+}
+div {
+    /*background: #ccc;*/
+}
+#two, #three {
+    margin-left:10%;
+    width:90%;
+    height:100%;
+    background: #ccc;
+    padding-bottom: 56px;
+}
+
+#one {    
+    position:fixed;
+    top:0px;
+    bottom:0;
+    left:0px;   
+    width:10%; 
+    background-color: #999999;
+
+}
+.footer{
+	background: #ff0000;
+	margin-top: -56px;
+}
+.txt {
+	color: #fff; 
+	font-size: 16px;
+}
+
+.btn-group-vertical > button{cursor: pointer;}
+ul{margin: 0; text-align: center;}
+ul li{display: inline-block; padding: 20px;}
+</style>
+</head>
+<body>
+
+<div id="one">
+ 	<div class="btn-group-vertical">
+        <button type="button" class="jsBtnDashboard dashboard-core-button active"><i class="fa fa-th-large"></i><br>Dashboard</button>
+        <button type="button" class="dashboard-core-button" onclick="location.href=&quot;/Admin/Collaborator/Dashboard&quot;">
+        	<i class="fa fa-users"></i><br>Collaborators
+        </button>
+        <button type="button" class="dashboard-core-button"><i class="fa fa-check"></i><br>Approval Queue</button>
+    </div>
+</div>
+
+<div id="two">two</div>
+<!-- <div id="three">three</div> -->
+
+<footer class="footer xs-footer">
+	<div class="container">
+	    <div class="row">
+	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	            
+	            <ul>
+	                <li><a class="txt" href="/EVO/AboutEvo">About</a></li>
+	                <li><a class="txt" href="/Evo/Packages">Packages</a></li>
+	                <li><a class="txt" href="/FAQ">FAQs</a></li>
+	                <li><a class="txt" href="/Evo/ContactUs" target="_top">Contact</a></li>
+	                
+	            </ul>
+	        </div>        
+	    </div>
+	</div>
+</footer>
+
+</body>
+</html>

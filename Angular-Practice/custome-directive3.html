@@ -1,0 +1,40 @@
+<html>
+   
+   <head>
+      <title>Angular JS Custom Directives</title>
+      
+   </head>
+   
+   <body ng-app = "myApp">
+   <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <h2>AngularJS Sample Application</h2>
+      
+      <div ng-controller="ctrl">
+         <!-- <div ng-include="'myChildView.html'"></div> -->
+         <div my-shared-scope></div>
+      </div>
+		
+      
+      
+         <script>
+
+         var myApp = angular.module('myApp', []);
+
+         myApp.controller("ctrl", function($scope){
+            $scope.customer = {
+                 name: 'David',
+                 street: '1234 Anywhere St.'
+             };
+         });
+
+         myApp.directive('mySharedScope', function () {
+             return {
+                 template: 'Name: {{customer.name}} Street: {{customer.street}}'
+             };
+         });
+
+   
+    </script> 
+      
+   </body>
+</html>
