@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+	<link rel="stylesheet" href="bootstrap.min.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+</head>
+<body>
+<div class="container" ng-controller="ctrl1">
+	<div>{{artist}}</div>
+</div>
+<br>
+<div class="container" ng-controller="ctrl2">
+	<div>{{artist}}</div>
+</div>
+
+
+<!-- <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script> -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script> -->
+
+<script>
+	
+var	app = angular.module('demo', []);
+
+	app.factory('myFactory', function(){
+		var _artist = 'Kat';
+		var factory = {};
+
+		factory.getArtist = function(){
+			return _artist;
+		}
+
+		return factory;
+	});
+	app.controller('ctrl1', function($scope, myFactory){
+		$scope.artist = myFactory.getArtist();
+	});
+
+
+	app.service('myService', function(){
+		var _artist = 'vijay';
+		this.getArtist = function(){
+			return _artist;
+		}
+	});
+
+	app.controller('ctrl2', function($scope, myService){
+		$scope.artist = myService.getArtist();
+	});
+
+
+	
+
+
+</script>
+
+</body>
+</html>
