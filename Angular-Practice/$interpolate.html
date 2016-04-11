@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile System</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+	<link rel="stylesheet" href="bootstrap.min.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myController">
+<input type="text" ng-model="name" />
+ <br />
+ Counter: {{counter}}
+
+ <!-- <div class="well" data-ng-controller="myCtrl"> -->
+ 	<!-- <input type="text" ng-model="handle" /> -->
+ <!-- <br /> -->
+ FacebookID is:  {{handle}}
+ </div>
+
+<!-- <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script> -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script> -->
+
+<script>
+	
+var myapp = angular.module("myapp", []);
+ var myController = myapp.controller("myController", function ($scope,$parse,$interpolate,$compile) {
+		 var string = 'My Name is {{name}}';
+		$scope.name = 'Manish';
+		$interpolate(string)($scope); //this will result in My Name is Manish
+ 	});
+
+
+
+ // var myController = myapp.controller("myCtrl", function ($scope) {
+
+ // 	$scope.handle = '';
+ // 	$scope.$watch('handle', function(newValue, oldValue){
+ // 		console.log('New Value is: ' + newValue);
+ // 		console.log('Old Value is: ' + oldValue);
+ // 	});
+
+ // 	setTimeout(function(){
+ // 		$scope.$apply(function(){
+ // 			$scope.handle = 'hello';
+ // 			console.log('value changed');
+ // 		});
+ // 	}, 3000);
+
+ // });
+</script>
+
+</body>
+</html>

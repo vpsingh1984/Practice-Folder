@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Variables</h1>
+
+<p>If you re-declare a JavaScript variable, it will not lose its value.</p>
+
+<p id="demo"></p>
+<input type="checkbox" id="checkbox1">
+
+<script>
+
+	var myVar = "global"; // Declare a global variable
+
+    function checkscope( ) {
+
+      myVar = "local";  // Declare a local variable
+
+    }
+    checkscope();
+
+    var name = myVar;
+
+    alert(name + " name");
+
+    console.log(myVar);
+
+i= "john";
+i= 8;
+
+
+
+console.log(i);
+
+function status(){
+	var result = document.getElementById('checkbox1').checked;
+
+console.log(result);
+
+if (result == true){
+	console.log("checked")
+}
+else {
+	console.log("Un checked")
+}
+}
+status();
+
+</script>
+
+</body>
+</html>
+
+
