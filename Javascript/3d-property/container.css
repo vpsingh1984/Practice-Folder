@@ -1,0 +1,48 @@
+.focusContainer {
+    width: 390px;
+    height: 280px;
+    position: absolute;
+    top: 230px;
+    left: 370px;
+    overflow: hidden;
+    -webkit-border-radius: 0px 0px 15px 0px;
+    -webkit-mask-box-image: url(../images/mask.svg);
+    background: -webkit-linear-gradient(left, #3d4aa2 0%, #059cc1 58%, #25579c 100%);
+}
+.focusBox {
+    padding: 0;
+    width: 390px;
+    height: 280px;
+    position: absolute;
+    /* overflow: hidden; */
+    background: transparent;
+    /* -webkit-border-radius: 0px 0px 15px 0px; */
+    /* border: 1px solid; */
+}
+
+.focusContainer .horizontal-items-wrapper ul {
+    position: relative;
+    left: 0px;
+    float: left;
+}
+.focusContainer .horizontal-items-wrapper ul {
+    width: 4000px;
+    /* -webkit-transition: transform 500ms ease-out; */
+}
+
+.focusContainer .horizontal-items-wrapper ul li {
+    margin: 0;
+    padding: 0;
+    width: 390px;
+    height: 280px;
+    vertical-align: top;
+    display: block;
+    /* -webkit-border-radius: 0px 0px 15px 0px; */
+    /* -webkit-border-radius: 15px; */
+    /* border: 1px solid; */
+    position: relative;
+    font-family: "Proximus", "ProximusBold";
+    font-weight: 600;
+    /* background: -webkit-linear-gradient(left, #3d4aa2 0%, #059cc1 58%, #25579c 100%); */
+}
+

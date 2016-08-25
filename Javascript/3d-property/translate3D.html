@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="buttonsContainer">
+	<button type="button" id="leftButton" class="btn btn-primary">Left</button>
+	<button type="button" id="rightButton" class="btn btn-primary">Right</button>
+</div>
+<div class="displayContainer">
+	<div class="topStrip"></div>
+	<div class="bottomStrip"></div>
+
+
+	<div id="main-hub-parent">
+		<ul id="mainContainer" style="transform: translate3d(0px, 0px, 0px);">
+			<li>Div One</li>
+			<li>Div Two</li>
+			<li class="activeItem" style="width: 345px;">Div Three</li>
+			<li>Div Four</li>
+			<li>Div Five</li>
+			<li>Div Six</li>
+			<li>Div Seven</li>
+		</ul>
+	</div>
+	<div class="focusContainer">
+		<div class="focusBox">
+			<ul id="focusedItemContainer" class="horizontal-items">
+				<li id="item_12" class="focusedItem ">
+					<span class="poster-right-heading">12RSYSTEST NL</span></li>
+				<li id="item_1" class="focusedItem current">
+					<span class="poster-right-heading">1films zoeken</span>
+				</li><li id="item_2" class="focusedItem ">
+					<span class="poster-right-heading">2Cinefeel Pass</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+<script src="custom.js"></script>
+</body>
+</html>
+
