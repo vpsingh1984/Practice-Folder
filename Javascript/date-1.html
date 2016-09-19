@@ -5,15 +5,27 @@
 
 <div>hi</div>
 <p id="demo">vijay</p>
-<p>hello</p>
+<button onclick="removeAttr()">Remove Attribute</button>
+<button onclick="addAttr()">Add Attribute</button>
+<a id="one" href="http://www.google.com" title="Google">Google.com</a>
+<a id="two" href="http://www.yahoo.com">Yahoo.com</a>
 
 
 
 <script>
+//"use strict"
+var object1 = new Object();
+var object2 = object1;
+object1.myCustomProperty = "Awesome!";
+console.log(object2.myCustomProperty); // "Awesome!"
 
+function removeAttr(){
+	document.getElementById("one").removeAttribute("title");
+}
+function addAttr(){
+	document.getElementById("two").setAttribute("title", "Yahoo.com");
+}
 
-
-css and html changes for dashboard for large screen and medium screen
 </script>
 
 </body>

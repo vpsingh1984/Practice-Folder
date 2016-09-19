@@ -28,7 +28,9 @@ body{
 	left: 40%;
 	top: 30px;
 }
-
+.item{
+    border-top: 1px solid block;
+}
 /*Showcase Divs*/
 .divOne{
 	width: 300px;
@@ -46,10 +48,11 @@ div#main-hub-parent {
     overflow: hidden;
 }
 ul#mainContainer{
-	width: 2000px;
+	width: 3000px;
     margin: 0px;
     padding: 0px;
     list-style: decimal;
+    margin-left: -480px;
 }
 ul#mainContainer li {
     margin: 0;
@@ -94,4 +97,13 @@ ul#mainContainer li:nth-child(even){
     height: 280px;
     position: relative;
     background: -webkit-linear-gradient(left, #3d4aa2 0%, #059cc1 58%, #25579c 100%);
+}
+.zeroWidth {
+    width: 0px;
+    -webkit-transition: width 2s;
+    transition: width 2s;
+
+}
+.clicked{
+    width: 240px;
 }

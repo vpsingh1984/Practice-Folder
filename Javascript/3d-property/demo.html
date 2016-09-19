@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style> 
+#box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+}
+
+#box.clicked{
+    width: 300px;
+}
+
+.item{
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js>"<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style> 
+#box{
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+}
+
+#box.clicked{
+    width: 300px;
+}
+
+.item{
+    transition: width 2s;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+}
+ul#mainContainer li:nth-child(even) {
+    background: red;
+    width: 100px; height: 100px;
+    float: left;
+}
+ul#mainContainer li:nth-child(odd) {
+    background: yellow;
+    width: 100px; height: 100px;
+    float: left;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div class="buttonsContainer">
+	<button type="button" id="leftButton" class="btn btn-primary">Left</button>
+	<button type="button" id="rightButton" class="btn btn-primary">Right</button>
+</div>
+<ul id="mainContainer">
+	<li class="item">Div One</li>
+</ul>
+
+	<li class="item">Div Nine</li>
+</ul>
+
+</body>
+</html>
+</script>
+<script>
+
+
+$(document).ready(function(){
+
+
+	$('#box').on('click', function() {
+
+	    $(this).toggleClass('clicked');
+	});
+	
+	$('#rightButton').on('click', function() {
+
+	    var elem=$('#mainContainer li:last');
+		elem.removeAttr("style");
+		elem.css('width', '0px');
+		elem.prependTo(mainContainer);
+		elem.addClass('');
+		elem.css('width', '240px')
+	});
+
+});
+</script>
+</head>
+<body>
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div id="box"></div>
+<div class="buttonsContainer">
+	<button type="button" id="leftButton" class="btn btn-primary">Left</button>
+	<button type="button" id="rightButton" class="btn btn-primary">Right</button>
+</div>
+<ul id="mainContainer">
+	<li class="item">Div One</li>
+	<li class="item">Div Two</li>
+	<li class="item">Div Three</li>
+	<li class="item">Div Four</li>
+	<li class="item activeItem" style="width: 345px;">Div Five</li>
+	<li class="item">Div Six</li>
+	<li class="item">Div Seven</li>
+	<li class="item">Div Eight</li>
+	<li class="item">Div Nine</li>
+</ul>
+
+</body>
+</html>

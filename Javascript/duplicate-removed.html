@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The best way to loop through an array is using a standard for loop:</p>
+
+<!-- <button onclick="myFunction()">Try it</button> -->
+
+<p id="demo"></p>
+<p id="firstP">firstP<p>
+
+<script>
+
+	var fruits = ["Banana", "Orange", "Banana", "Apple", "Orange", "Mango","Banana",];
+    
+	// function removeDuplicateValue(fruits) {
+	//     var obj = {};
+	//     for (var i = 0; i < fruits.length; i++) {
+	//         obj[fruits[i]] = true;
+	//     }
+	//     arr = [];
+	//     for (var key in obj) {
+	//         arr.push(key);
+	//     }
+	//     document.getElementById("demo").innerHTML = arr;
+	//     return arr;
+	// }
+	// removeDuplicateValue(fruits);
+
+	var uniqueNames = [];
+
+    for(var i in fruits){
+        if(uniqueNames.indexOf(fruits[i]) === -1){
+            uniqueNames.push(fruits[i]);
+        }
+    }
+    document.getElementById("demo").innerHTML = uniqueNames;
+
+</script>
+
+</body>
+</html>
