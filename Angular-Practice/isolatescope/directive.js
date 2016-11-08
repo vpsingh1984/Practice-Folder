@@ -1,8 +1,11 @@
-angular.module('directivesModule').directive('myIsolatedScopeWithName', function () {
+var app = angular.module('directivesModule', []);
+	app.directive('isolatedScope', function () {
     return {
+    	bindToController: true,
+        restrict: 'E',
         scope: {
-            name: '@'
+            customer: '=' //Two-way data binding
         },
-        template: 'Name: {{ name }}'
+        template: '<ul><li ng-repeat="prop in customer">{{ prop }}</li></ul>'
     };
 });

@@ -5,16 +5,14 @@
   <title>Example - example-example17-production</title>
   
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-  <script src="script.js"></script>
-  <script src="directive.js"></script>
-  
-
-  
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="directive.js"></script>
+<script src="customerCtrl.js"></script>
+    
 </head>
-<body ng-controller="">
+<body ng-controller="CustomersController">
  
-<div my-isolated-scope-with-name name="{{ customer.name }}"></div>
+	<isolated-scope name="{{ customer.name }}"></isolated-scope>
 
 </body>
 </html>
