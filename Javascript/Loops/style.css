@@ -1,0 +1,11 @@
+html {
+  font-size: 20px;
+}
+ 
+.level-1, .level-2 {
+  font-size: 0.5em;
+}
+ 
+.level-3 {
+  font-size: 2em;
+}

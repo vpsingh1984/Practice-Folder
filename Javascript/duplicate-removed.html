@@ -11,6 +11,32 @@
 
 <script>
 
+
+var points = [40,5,10,22,13,10,22,10];
+
+var obj={};
+var dup=[];
+var newArray=[];
+
+for(var i=0;i<points.length;i++){
+  if(obj[points[i]]){
+    dup.push(points[i]);
+    //console.log(obj);
+  }else{
+    obj[points[i]] = true;
+    newArray.push(points[i]);
+  }
+}
+
+console.log(dup.toString());
+console.log(newArray.sort());
+
+
+
+
+
+
+
 	var fruits = ["Banana", "Orange", "Banana", "Apple", "Orange", "Mango","Banana",];
     
 	// function removeDuplicateValue(fruits) {
@@ -28,13 +54,29 @@
 	// removeDuplicateValue(fruits);
 
 	var uniqueNames = [];
+	var dupValues = [];
+	var obj = {};
 
     for(var i in fruits){
         if(uniqueNames.indexOf(fruits[i]) === -1){
             uniqueNames.push(fruits[i]);
+        }else{
+        	dupValues.push(fruits[i]);
         }
     }
-    document.getElementById("demo").innerHTML = uniqueNames;
+
+    for (var key in dupValues) {
+    	if (obj.hasOwnProperty(dupValues[key])) {
+    		console.log(obj);
+    	}else{
+    		obj.dupValues[key];
+    		obj.dupValues[key].count;
+    	}
+    }
+   // console.log(uniqueNames);
+    //console.log(dupValues);
+
+    //document.getElementById("demo").innerHTML = uniqueNames;
 
 </script>
 

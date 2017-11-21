@@ -11,84 +11,21 @@
 <script>
 
 
-// function person(first, last, age, eye) {
-//     this.firstName = first;
-//     this.lastName = last;
-//     this.age = age;
-//     this.eyeColor = eye;
-// }
+function Employee(name){
+  
+  this.name = name;
+  
+}
 
-// var myFather = new person("John", "Doe", 50, "blue");
-// var myMother = new person("Sally", "Rally", 48, "green");
+Employee.prototype.getName = function(){
+  return this.name;
+}
 
-// person.prototype.nationality = "Indian";
+var val1 = new Employee("Vijay");
+var val2 = new Employee("Singh");
 
-// console.log(myFather.nationality);
-
-
-
-	// function company (name, empid){
-	// 	this.name = name;
-	// 	this.empid = empid;
-	// }
-
-	// function employee(){
-	// 	this.salary = 20000;
-	// }
-	
-	// company.prototype = {
-	// 	fullName: function(){
-	// 		return this.name + " " + this.empid;
-	// 	}
-	// }
-	// var c = Object.create(company.prototype);
-	// 	c.name = "hello";
-	// 	c.myFunction = function(){
-	// 		return this.empid;
-	// 	}
-
-
-        // I am the person constructor.
-        function Person( name ){
-            // Store the property.
-            this.name = name;
-        }
-        // Set up the class methods.
-        Person.prototype.getName = function(){
-            return( this.name );
-        };
-
-         function Girl( name ){
-            // Call the super constructor.
-            Person.call( this, name );
-            // Create the traits property.
-            this.traits = {};
-        }
-
-        Girl.prototype = Object.create( Person.prototype );
-
-        // Create a girl instance.
-        var sarah = new Girl( "Sarah" );
-
-        // Set sarah's properties.
-        sarah.traits.age = 30;
-        sarah.traits.weight = 125;
-
-        // Create a girl instance.
-        var tricia = new Girl( "Tricia" );
-
-        // Set tricia's properites.
-        tricia.traits.age = 32;
-        tricia.traits.weight = 140;
-
-        // Log the girls' traits.
-        console.log( sarah.getName(), sarah.traits );
-        console.log( tricia.getName(), tricia.traits );
-
-	//console.log(c.myFunction(20));
-
-
-// , details.empid, details.salary
+console.log(val1.getName());
+console.log(val2.getName());
 </script>
 
 

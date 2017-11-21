@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+	<title>Profile System</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.10/css/dataTables.bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+</head>
+<body>
+/*
+Write a JavaScript program which compute, the average marks of the following students Then, this average is used to determine the corresponding grade.
+*/
+
+<script type="text/javascript">
+	
+var students = [["vinod", 80], ["vijay", 85], ["divya", 77], ["sunny", 95]];
+var avg;
+var total = 0;
+
+for(let i=0; i<students.length; i++){
+	total += students[i][1];
+	avg = total/students.length;
+}
+
+console.log("Average is :" + avg);
+if (avg < 60) {
+	console.log("Grage is :" + "E");
+}else if (avg < 70) {
+	console.log("Grage is :" + "D");
+}else if (avg < 80) {
+	console.log("Grage is :" + "C");
+}else if (avg < 90) {
+	console.log("Grage is :" + "B");
+}else if (avg < 100) {
+	console.log("Grage is :" + "A");
+}
+
+
+</script>
+
+
+<script src="custom.js"></script>
+</body>
+</html>

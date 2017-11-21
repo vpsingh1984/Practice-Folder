@@ -4,31 +4,32 @@
       <title>Angular JS Custom Directives</title>
    </head>
    
-   <body>
+   <body  ng-app = "myApp">
       <h2>AngularJS Sample Application</h2>
       
-      <div ng-app = "myApp">
-         <myDir></myDir><br/>
-         <!-- <student name = "Piyush"></student> -->
+      <div ng-controller="main">
+         <!--directive: my-dir -->
       </div>
 		
       <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
       
-         <script>
+    <script>
 
          var myApp = angular.module('myApp', []);
 
     //creating custom directive syntax
+
     myApp.directive("myDir", function () {
      return {
-        restrict: "E", //define directive type like E = element, A = attribute, C = class, M = comment
+        restrict: "M", //define directive type like E = element, A = attribute, C = class, M = comment
         template: "<div>{{ myName }}</div>",// define HTML markup
-        replace: false, // replace original markup with template yes/no
-        controller: function ($scope) { //define controller, associated with the directive template
-               $scope.myName = "vijay";
-            }
-        }
+        replace: true, // replace original markup with template yes/no
+        scope:{myName : "vijay"}
+      }
      });
+    myApp.controller("main",function($scope){
+        $scope.myName = "vijay";
+    })
     </script> 
       
    </body>

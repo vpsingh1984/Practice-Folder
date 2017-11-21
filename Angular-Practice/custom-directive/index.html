@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="directivesModule">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-example17-production</title>
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="directive.js"></script>
+<!-- <script src="customerCtrl.js"></script> -->
+    
+</head>
+<body>
+<!-- <body> -->
+<!-- <div>
+	<custom-directive name="{{customer.name}}"></custom-directive>
+</div> -->
+
+<div ng-controller="CustomersController">
+	<custom-directive customers="customers"></custom-directive>
+</div>
+
+
+
+</body>
+</html>

@@ -7,22 +7,20 @@
 <p>Click the second button to prevent the first function to execute. (You must click it before the 3 seconds are up.)</p>
 <input class="vijay" type="checkbox" name="checkbox" /><br/>
 
-<button onclick="myFunction()">Try it</button>
-<button onclick="myStopFunction()">Stop the alert</button>
+<button onclick="checkStatus()">checkStatus</button>
 
 <script>
 
-// var status = document.getElementsByClassName('vijay').checked;
+var status = document.getElementsByClassName('vijay').checked;
 
-// if (status == true){
-// 	alert('checked');
-// }else{
-// 	alert('un checked');
-// }
+function checkStatus(){
+	if (status == true){
+		alert('checked');
+	}else{
+		alert('un checked');
+	}
+}
 
-var url = window.location.href;
-
-console.log(url);
 </script>
 
 

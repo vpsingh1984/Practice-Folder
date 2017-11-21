@@ -5,12 +5,28 @@
 <p id="demo"></p>
 
 <script>
- // Declare x
-x = 5; // Assign 5 to x
 
-elem = document.getElementById("demo"); // Find an element 
-elem.innerHTML = x;   
-var x;                  // Display x in the element
+var x = findMax(1, 123, 500, 115, 44, 88);
+function findMax() {
+    var i, max=null;
+    for (i = 0; i<arguments.length; i++) {
+    	if(arguments[i] > max){
+    		max = arguments[i];
+    	}
+    }
+    return max;
+}
+
+function isPalindrome(str){
+
+  str = str.replace(/\W/g, '').toLowerCase();
+
+  return (str == str.split('').reverse().join(''));
+
+}
+
+
+console.log(isPalindrome("sa r as"));
 
 </script>
 
